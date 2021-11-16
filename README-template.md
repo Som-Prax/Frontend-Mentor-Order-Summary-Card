@@ -50,7 +50,7 @@ Start with HTML, and then CSS. Struggled a lot because I am still not used to th
 - [Styled Components](https://styled-components.com/) - For styles
 
 
-### What I learned
+### What I learnt
 
 ```css
 body {
