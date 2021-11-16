@@ -11,11 +11,6 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -54,11 +49,4 @@ background-repeat: no-repeat;
 ### Continued development
 I think I will focus on CSS and make more decent-looking websites. I hope I can masater HTML CSS and JavaScript one day soon. 
 
-### Useful resources
-I read some codes from other people, and I think that helps me a lot. 
 
-## Author
-Just a newbie, no websites or anything else. 
-
-## Acknowledgments
-Some people's codes in the solution section helped me a lot, I almost felt overwhelmed because their codes looked brilliant and mine looked long and boring. 
