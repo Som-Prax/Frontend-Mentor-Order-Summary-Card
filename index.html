@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        font-family: "Red Hat Display", sans-serif;
+        background-color: hsl(225, 100%, 94%);
+        background-image: url(images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .background {
+        display: inline;
+      }
+
+      .pay-sec {
+        max-width: 144rem;
+        display: flex;
+        justify-items: center;
+        margin-top: 8rem;
+      }
+
+      .all-card {
+        box-shadow: 0 0.2rem 1.5rem 0.2rem rgba(0, 0, 0, 0.2);
+        margin: auto;
+        width: 43rem;
+        border-radius: 9px;
+        background-color: #fff;
+        margin-bottom: 10rem;
+      }
+
+      .img {
+        border-top-left-radius: 9px;
+        border-top-right-radius: 9px;
+        width: 43rem;
+        height: 22rem;
+        align-items: center;
+        justify-items: center;
+      }
+
+      .heading-order {
+        font-weight: 900;
+        font-size: 2.8rem;
+        padding-top: 3rem;
+      }
+
+      .pay-descrip-box {
+        padding: 1.5rem 6.5rem 2rem 6.5rem;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      .pay-descrip {
+        font-size: 1.6rem;
+      }
+
+      .pay-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .card {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 0.3fr 1fr 0.3fr;
+        background-color: hsl(225, 100%, 94%);
+        padding: 1.4rem 2rem;
+        border-radius: 9px;
+        row-gap: 0.3rem;
+      }
+
+      .music-b {
+        grid-row: 1 / span 2;
+      }
+
+      .change-b {
+        grid-row: 1 / span 2;
+        grid-column: 3 /4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 8rem;
+      }
+
+      .change {
+        font-size: 1.6rem;
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+        color: hsl(245, 75%, 52%);
+        font-weight: 700;
+        text-decoration: underline;
+      }
+
+      .change:active {
+        color: rgba(56, 41, 224, 0.8);
+        text-decoration: none;
+      }
+
+      .annual-plan-b,
+      .price-per-year-b {
+        grid-column: 2/ 3;
+        padding-left: 2.5rem;
+      }
+
+      .annual-plan-b {
+        display: flex;
+        align-items: end;
+        justify-content: start;
+      }
+
+      .annual-plan {
+        font-weight: 900;
+        font-size: 1.6rem;
+      }
+
+      .price-per-year {
+        font-size: 1.6rem;
+        color: #555;
+      }
+
+      .price-per-year-b {
+        display: flex;
+        justify-content: start;
+      }
+
+      .music-b svg {
+        border-radius: 50%;
+      }
+
+      .flex {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+      }
+
+      .payment-b,
+      .cancel-b {
+        align-self: center;
+      }
+
+      .proceed-payment,
+      .cancel-order {
+        width: 36.5rem;
+        margin-top: 2rem;
+        padding: 1.2rem 5rem;
+        border: none;
+        border-radius: 9px;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 1.5rem;
+      }
+
+      .proceed-payment {
+        color: #fff;
+        background-color: #1e1fcd;
+        box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.3);
+      }
+
+      .proceed-payment:active {
+        background-color: rgba(30, 31, 205, 0.8);
+      }
+
+      .cancel-order {
+        background-color: #fff;
+        color: #555;
+      }
+
+      .cancel-order:active {
+        color: #000;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      .attribution {
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      @media (max-width: 30rem) {
+        html {
+          font-size: 40%;
+        }
+
+        body {
+          background-image: url(images/pattern-background-mobile.svg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pay-sec">
+      <div class="all-card">
+        <div class="pay-img">
+          <img src="/images/illustration-hero.svg" alt="beautiful image" class="img" />
+        </div>
+
+        <div class="not-pic">
+          <div class="pay-text">
+            <h2 class="heading-order">Order Summary</h2>
+
+            <div class="pay-descrip-box">
+              <p class="pay-descrip">You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!</p>
+            </div>
+          </div>
+
+          <div class="flex">
+            <div class="card">
+              <div class="music-b">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+                  <g fill="none" fill-rule="evenodd">
+                    <circle cx="24" cy="24" r="24" fill="hsl(224, 23%, 80%)" />
+                    <path fill="#717FA6" fill-rule="nonzero" d="M32.574 15.198a.81.81 0 00-.646-.19L20.581 16.63a.81.81 0 00-.696.803V26.934a3.232 3.232 0 00-1.632-.44A3.257 3.257 0 0015 29.747 3.257 3.257 0 0018.253 33a3.257 3.257 0 003.253-3.253v-8.37l9.726-1.39v5.327a3.232 3.232 0 00-1.631-.441 3.257 3.257 0 00-3.254 3.253 3.257 3.257 0 003.254 3.253 3.257 3.257 0 003.253-3.253V15.81a.81.81 0 00-.28-.613z" />
+                  </g>
+                </svg>
+              </div>
+              <div class="annual-plan-b">
+                <span class="annual-plan">Annual Plan</span>
+              </div>
+              <div class="price-per-year-b">
+                <span class="price-per-year">$59.00/year</span>
+              </div>
+              <div class="change-b">
+                <button class="change">Change</button>
+              </div>
+            </div>
+
+            <div class="payment-b">
+              <button class="proceed-payment">Proceed to payment</button>
+            </div>
+            <div class="cancel-b">
+              <button class="cancel-order">Cancel order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <p class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Felix Tan</a>.</p>
+  </body>
+</html>
